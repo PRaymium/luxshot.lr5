@@ -16,10 +16,6 @@ $owner = $owner->fetchAll();
 $items = $connection->prepare("SELECT * FROM screenshots WHERE img=?");
 $items->execute([$img]);
 
-// for ($a = 0; $a < 20; $a++){
-//     echo (uniqid());
-//     echo "\n";
-// }
 ?>
 
 <head>
@@ -40,7 +36,7 @@ $items->execute([$img]);
                         <div class="screenshot-block-info__date">Дата загрузки:<br><?= $item['date'] ?></div>
                         <div class="screenshot-block-info__owner">Владелец:<br><?= $owner[0]['name'] ?></div>
                     </div>
-                    <button id="download_button" class="screenshot-block__download-button">Скачать</button>
+                    <a href="download_img.php?img=<?= $item['img']?>" id="download_button" class="screenshot-block__download-button">Скачать</a>
                 </div>
             <?php endforeach; ?>
         </div>

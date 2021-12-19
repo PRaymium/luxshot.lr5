@@ -13,6 +13,7 @@
     height: 100%;
     border-radius: 3em;
     border: 1px solid #3A3C4C;
+    box-sizing: border-box; 
 }
 
 .screenshot-block-info {
@@ -42,11 +43,23 @@
     padding: 1% 2%;
     margin-top: 5%;
     cursor: pointer;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.screenshot-block__download-button:visited {
+    color: #ED2545;
 }
 
 .screenshot-block__download-button:hover{
     border: 1px solid #ED2545;
     background-color: rgba(255,255,255,0.05);
+}
+
+.screenshot-block__download-button:active{
+    background-color: rgba(255,255,255,0.2);
 }
 
 
@@ -72,6 +85,7 @@
     }
 
     .screenshot-block__download-button {
+        width: 100%;
         padding: 3%;
         margin-top: 8%;
         margin-bottom: 6%;
