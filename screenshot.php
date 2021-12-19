@@ -2,10 +2,10 @@
 <?php session_start(); ?>
 <?php require "templates/head.html" ?>
 <?php
-$id = $_GET['id'];
+$img = $_GET['img'];
 
-$items = $connection->prepare("SELECT * FROM screenshots WHERE id=?");
-$items->execute([$id]);
+$items = $connection->prepare("SELECT * FROM screenshots WHERE img=?");
+$items->execute([$img]);
 
 $items = $items->fetchAll();
 $user_id = $items[0]['user_id'];
@@ -13,8 +13,8 @@ $user_id = $items[0]['user_id'];
 $owner = $connection->prepare("SELECT * FROM users WHERE id=?");
 $owner->execute([$user_id]);
 $owner = $owner->fetchAll();
-$items = $connection->prepare("SELECT * FROM screenshots WHERE id=?");
-$items->execute([$id]);
+$items = $connection->prepare("SELECT * FROM screenshots WHERE img=?");
+$items->execute([$img]);
 
 // for ($a = 0; $a < 20; $a++){
 //     echo (uniqid());

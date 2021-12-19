@@ -252,6 +252,11 @@ body::-webkit-scrollbar-thumb
     border-radius: 50px;
     cursor: pointer;
     transition: .1s ease-in-out;
+    text-decoration: none;
+}
+
+.upload-block:visited{
+    color: #68111f;
 }
 
 .upload-block:hover{
