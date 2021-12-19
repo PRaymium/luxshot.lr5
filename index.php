@@ -2,7 +2,7 @@
 <?php session_start(); ?>
 
 <?php
-$query = "SELECT id FROM screenshots";
+$query = "SELECT id FROM screenshots WHERE public='1'";
 $items_count = $connection->query($query);
 $items_count = $items_count->fetchAll();
 

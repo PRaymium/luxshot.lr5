@@ -2,7 +2,7 @@
 require "db.php";
 $items_size = 6;
 
-$query = "SELECT id FROM screenshots";
+$query = "SELECT id FROM screenshots WHERE public='1'";
 $items_count = $connection->query($query);
 $items_count = $items_count->fetchAll();
 $items_count = count($items_count);
